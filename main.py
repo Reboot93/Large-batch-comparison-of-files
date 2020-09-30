@@ -6,7 +6,7 @@ import tkinter as tk
 from tkinter import filedialog
 import hashlib
 
-print('简易文件比对TOOL=====V0.1')
+print('简易文件比对TOOL=====V0.2')
 
 work_dir = '暂未设定'
 lineNub = 10
@@ -16,7 +16,7 @@ nowline = int(0)
 filelist = []
 
 root = tk.Tk()
-root.title('简易文件比对V0.1===真的假的鸭鸭？')
+root.title('简易文件比对V0.1===真的假的鸭？')
 root.geometry('550x100')
 
 lineNub_show = tk.StringVar()
@@ -81,7 +81,11 @@ def main():
             find_run(filemd5, file_absolute_path)
         else:
             pass
-
+    er = tk.Tk()
+    er.geometry('700x500')
+    text = tk.Label(er, text='在指定文件夹下对比结束')
+    text.grid(row=0, column=0)
+    er.mainloop()
 
 def del_aft_cp():
     for filepath in filelist:
